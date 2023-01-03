@@ -1,0 +1,251 @@
+/* Declaramos las variables que utilizaremos para definir los colores */
+:root {
+	--rojo: #e60807;
+	--fondo: #141414;
+}
+
+
+/*Reiniciamos los valores del navegador*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Valores para la etiqueta general Body */
+body {
+	background: var(--fondo);
+}
+
+/* Propiedades para el menu, agregamos un padding de 30px de arriba a bajo */
+header {
+	padding: 30px 0;
+}
+
+/* definimos las propiedades del contenedor de la película principal */
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+
+/* se le agregar este contenedor para que logo y menu tiene que en una posicion*/
+header .contenedor {
+	display: flex;/* se le pone este flex y justif-conten para dar la idicacion que el logotipo este en la izquierda y el menu ala derecha */
+	justify-content: space-between;
+	align-items: center;/*  para que ambos queden centrados  de forma verticar*/
+}
+/* vamos a darle diseño a nuestro logotipo*/
+header .logotipo {
+	font-weight: normal;/*aqui le indicamos que le quitar las letras en negritas para que no se ve muy remarcado*/
+	color: var(--rojo);/* ocupar la variable del color*/
+	font-size: 40px;/* damos la dimension de la letra */
+}
+/* se le van a gregar color a nav: es decir al menu */
+header nav a {
+	color: #AAA;/* todos van a tener el mismo color*/
+	text-decoration: none;/*le va quitar los subrayados*/
+	margin-right: 20px;/* va tener un margen un marhen ala derecha en cada elemento */
+}
+/* para darle  la funcion a nuestro menu  que al momento que lo selecionemos  se remarque con 
+un color balnco */
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;/* damos la dimension de la letra */
+	min-height: 40.62em;/* aqui le damos la  medida relativa*/
+	color: #fff;/*le asignamos el color al texto */
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(img/1.jpg);/* agremaos la imagen de fondo
+	y le vamos agregar los dos fondos  */
+	background-position: center center;/* ponemos la posicion que se centrado tanton vertical y horizontal*/
+	background-size: cover; /*este es para que la imagen ocupe el 100% es decir que adapte al tamaño*/
+	margin-bottom: 3.12em; /* para darle un marqgen en la parte de abajo */
+	display: flex; /*es igual para darle posicon a nuestro texto y con el alig-
+	items esta end para sean acomodados abajo*/
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto; /* es para quitarles el margen de arriba  y de abajo */
+	margin-bottom: 6.25em;/* marguen al texto */
+}
+/* le damos diseño al titulo  con su fondo y su margen que va tener en la parte de abajo */
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+/* le damos el disño  a la descripcion , con su tipo de letra , su margen y el ancho*/
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;/*margen de abajo */
+}
+/* trabajr con los botones */
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);/* el color  */ 
+	border: none;/*  es para quitar  el borde quem google  le da por defecto */
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;/*para darle los px ariba y izq  y derc */
+	color: #fff;/*le vamos dar un colorpara botones */
+	margin-right: 1.25em;/*le ponemos su margen ala derecha */
+	cursor: pointer;/* sele agrear un cursor*/
+	transition: .3s ease all;/*le ponemos una transicion que cada ves que pase el pulsor cambien el color  */
+	font-size: 1.12em;
+}
+/*para que cunado pase el pusor cambien de color  */
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+/*para que el texto se separe de icono   */
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+
+}
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+/* es para darle diseño al titulo*/
+.contenedor-titulo-controles {
+	display: flex;/*estas dos lienas es  para dar el posicon de derecha y izquierda */
+	justify-content: space-between;
+	align-items: end;
+}
+/* Damos color al titulo y le damos el tamaño */
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+/*para darle diseño al boton le poenmos el color , su ancho y su altura, su pusor y el margen que va llevar */
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+/*para que  cunado pasemos  los pulseres se active del color rojo */
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+/*  es para darle un estilo que abarca toda la area de las peliculas reomendadas    */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+/* es para darle la poscion a las flechas que seran centradas   */
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+/* para darle diseños alas felchas  */
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;/*  se le va dar pocion absolito para qie queden dentro del carusel */
+	border: none;/* botnon no tenga bordes */
+	background: rgba(0,0,0,0.3);/* le agregamos el color que tenga dondo trasfarencia */
+	font-size: 40px;
+	height: 50%;/* su altura */
+	top: calc(50% - 25%);/* tenga su pocion de arriba y abajo   */
+	line-height: 40px;
+	width: 50px;/* su ancho */
+	color: #fff;/* se le agrega el color del texto */
+	cursor: pointer;/*pursor   */
+	z-index: 500;/*  es para que flecha se quede en la parte  de arriba  */
+	transition: .2s ease all;/*tenga una transicion de dos segundos  */
+}
+
+/*es para las fechas le debos un color al momento que pulsemos de un color  */
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(196, 180, 180, 0.3);
+}
+/*es para las fechas se le de las posicones  */
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+/*es para las fechas se le de su posicon  */
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+/* ---- ----- ----- Carousel ----- ----- ----- */
+/*son las imaganes */
+.peliculas-recomendadas .contenedor-carousel{
+	width: 100%;/*abarque el contenedor al 100%*/
+	padding: 20px 0;/*es para que tenga su diseño de arriba y abajo */
+	overflow: hidden;/*para que todo que salga de la pantalla se oculte  */
+	scroll-behavior: smooth;/*establece el comportamiento del scroll y es smooth no se mueva nada*/
+	
+}
+/*a qui vamos a dar diseño al carusel, con este se acomodan las imagenes de forma vertical  */
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;/*las imanes quede una tras una  */
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;/*se le da el ancho  */
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+/*las imanes resalten un poco mas conel hover  */
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+/*darle su ancho y posicion vertical de cada imagen  */
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+/*Estas lienas son para darle diseño paraque se adapten los elemetos   */
+/* le esttamos indicamos que se  ejecute en una pantalla con u tamaño maximo */
+@media screen and (max-width: 800px) {
+	/*  es para que logotipo tenga un margen si se reduce no se amontone   */
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px; 
+	}
+
+	header .contenedor {
+		flex-direction: column;/*que ahora el menu aparezca  en la parte de  abajo */
+		text-align: center;/*es para que todos los textos qun centardos   */
+	}
+/*cambiamos el tamño de la pelicula principal  */
+	.pelicula-principal {
+		font-size: 14px;
+	}
+/*  es para que la descripcion  tambien se adapte al tamaño   */
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+	/*  tengas su over sea visibles  es decir es para que no se corte las imagenes */
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+/* las imagenes se ponga en una columnan de tres */
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+/* que se quite las fechas cuando se reduscan el tamaño */
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}

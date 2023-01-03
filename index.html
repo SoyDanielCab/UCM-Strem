@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name vffct content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="./img/shield.png">
+	<title>UCM Stream</title>
+	<!-- las tres siguientes líneas son un truco para obtener elementos semánticos de HTML5 que funcionan en versiones de Internet igul se hace la conexión 
+		con el css  -->
+</head>
+
+<body>
+	<!-- Aquí empieza el encabezado principal que se mantendrá en todas las páginas del sitio web -->
+	<header>
+		<!-- Aquí enpezamos con la primera divicion o agrupar contenedor -->
+		<div class="contenedor">
+			<h2 class="logotipo">UCM Stream</h2>
+			<!--h2 contiene un encabezado de nivel 2. Los encabezados, que sirven como títulos para porciones de contenido -->
+			<nav>
+				<!-- representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos 
+			en este caso es para nuestro menu -->
+
+				<!--En  las siguientes cinco lineas vamos a contener <a></a> lo cuale es un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, 
+				direcciones de correo, o cualquier otra URL, en estas misma lienas menejamos un fragmento vacío href="#" para enlazar a la parte superior de la página actual-->
+				<a href="#" class="activo">Inicio</a>
+				<a href="#">Programas</a>
+				<a href="#">Películas</a>
+				<a href="#">Más Recientes</a>
+				<a href="#">Mi lista</a>
+			</nav>
+		</div>
+	</header>
+	<!-- Enpezamos con el <main> que tiene como principal función contener los temas principales de una sección o documento.  -->
+	<main>
+		<!-- Aquí enpezamos con la primera divicion dentro de nuestro main lo cual lo tenemos como pelicula principal y en la segunda linea volvemos ocupara la divicon 
+	de la primera clase  -->
+		<div class="pelicula-principal">
+			<div class="contenedor">
+
+				<h3 class="titulo">Avenger: EndGame</h3>
+				<!-- representan los subtítulos que se encuentran presentes, en este caso tenemo sel nombre de nuestra primera pelicula  -->
+				<p class="descripcion">
+					<!-- El elemento p (párrafo) es el apropiado para distribuir el texto en párrafos este tiene un atributo clases separadas por espacios  -->
+					Y yo... Yo soy... Iron Man.
+				</p>
+				<!-- aqui tenemos los dos botenes principales y se le agrego los iconos correspondinetes   -->
+				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
+			</div>
+		</div>
+
+		<!-- En las siguietes dos lineas tenemos dos clases   -->
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<!-- representan los subtítulos que se encuentran presentes  -->
+				<h3>Películas Recomendadas</h3>
+				<div class="indicadores">
+
+				</div>
+
+			</div>
+			
+			<div class="contenedor-principal">
+				<!-- Aqui estamos relizando los botones que esatan en la parte del carusel, y le estamos dando la posicion izquierdad 
+				agregando un icono  -->
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i
+						class="fas fa-angle-left"></i></button>
+	
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<!--En  las siguientes ventiono  lineas vamos a contener <a></a> lo cuale es un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, 
+				direcciones de correo, o cualquier otra URL, en estas misma lienas menejamos un fragmento vacío href="#" para enlazar a la parte superior de la página actual
+			tambien se agregar las imagenes delas pelicula -->
+						<div class="pelicula">
+							<a href="#"><img src="./img/1.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/Infinity.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/civil_war.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/ant.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/thor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/madness.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/widow.jpg" alt=""></a>
+						</div>
+						
+						<div class="pelicula">
+							<a href="#"><img src="./img/Infinity.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/civil_war.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/1.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/widow.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/civil_war.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/ant.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/thor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/madness.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="./img/widow.jpg" alt=""></a>
+						</div>
+						
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i
+						class="fas fa-angle-right"></i></button>
+		</div>
+
+				
+
+				
+		
+
+
+	</main>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="./main.js"></script>
+</body>
+
+</html>
